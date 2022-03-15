@@ -10,10 +10,10 @@ st.write('''
             Identify the state, county, and corp you want to explore.       
             ''')
 
-indent = 4
-col1 = st.columns((1+indent, 1))
-with col1:
-    states = st.selectbox("Select a state", STATES).strip()
+# indent = 4
+# col1 = st.columns((1+indent, 1))
+# with col1:
+states = st.selectbox("Select a state", STATES).strip()
 
 # """
 # # Welcome to Streamlit!
