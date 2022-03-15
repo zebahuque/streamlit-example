@@ -16,7 +16,7 @@ In the meantime, below is an example of what you can do with just a few lines of
 """
 
 st.title("Climate Effects on Crop Production")
-st.st.write('''  
+st.write('''  
             ### hm
             Identify the state, county, and corp you want to explore.       
             ''')
