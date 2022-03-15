@@ -5,15 +5,21 @@ import pandas as pd
 import streamlit as st
 from constants import STATES
 
-st.title("Climate Effects on Crop Production in Midwestern Unites States")
+st.title("Climate Effects on Crop Production in Midwestern United States")
 st.write('''  
             Identify the configuration you would like to explore.       
             ''')
 
-# indent = 4
-# col1 = st.columns((1+indent, 1))
-# with col1:
-states = st.selectbox("Select a state. Some states are not yet available", STATES).strip()
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    state = st.selectbox("Select a state.", STATES).strip()
+
+with col2:
+    county = st.selectbox("Select a county.", STATES).strip()
+
+with col3:
+    crop = st.selectbox("Select a crop.", STATES).strip()
 
 # """
 # # Welcome to Streamlit!
