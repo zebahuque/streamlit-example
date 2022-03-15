@@ -3,12 +3,17 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
+from constants import STATES
 
 st.title("Climate Effects on Crop Production")
 st.write('''  
-            ### hm
             Identify the state, county, and corp you want to explore.       
             ''')
+
+indent = 4
+col1 = st.solumns((1+indent, 1))
+with col1:
+    states = st.selectbox("Select a state", STATES).strip()
 
 # """
 # # Welcome to Streamlit!
