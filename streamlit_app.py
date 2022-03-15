@@ -11,7 +11,7 @@ st.write('''
             ''')
 
 indent = 4
-col1 = st.solumns((1+indent, 1))
+col1 = st.columns((1+indent, 1))
 with col1:
     states = st.selectbox("Select a state", STATES).strip()
 
