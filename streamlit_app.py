@@ -4,7 +4,6 @@ import math
 import pandas as pd
 import streamlit as st
 from constants import STATES, CALIFORNIA_COUNTIES
-print(CALIFORNIA_COUNTIES)
 
 st.title("Climate Effects on Crop Production in Midwestern United States")
 st.write('''  
