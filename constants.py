@@ -51,7 +51,7 @@ STATES = [
     # 'Virginia',
     # 'Washington',
     # 'West Virginia',
-    'Wisconsin',
+    'Wisconsin'
     # 'Wyoming'
 ]
 
