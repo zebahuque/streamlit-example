@@ -3,7 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
-from constants import STATES
+from constants import STATES, CALIFORNIA_COUNTIES
 
 st.title("Climate Effects on Crop Production in Midwestern United States")
 st.write('''  
@@ -13,13 +13,18 @@ st.write('''
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    state = st.selectbox("Select a state.", STATES).strip()
+    state = st.selectbox("Select a state", STATES).strip()
 
-with col2:
-    county = st.selectbox("Select a county.", STATES).strip()
+if state == "California":
+    with col2:
+        county = st.selectbox("Select a county", CALIFORNIA_COUNTIES).strip()
+else:
+    with col2:
+        county = st.selectbox("Select a county", STATES).strip()
+
 
 with col3:
-    crop = st.selectbox("Select a crop.", STATES).strip()
+    crop = st.selectbox("Select a crop", STATES).strip()
 
 # """
 # # Welcome to Streamlit!
