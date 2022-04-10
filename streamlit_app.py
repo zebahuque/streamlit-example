@@ -158,11 +158,11 @@ temp2 = 0
 temp3 = 0
 temp4 = 0
 temp5 = 0
-totalTemp1 = 0
-totalTemp2 = 0
-totalTemp3 = 0
-totalTemp4 = 0
-totalTemp5 = 0
+totalTemp1 = 0.0
+totalTemp2 = 0.0
+totalTemp3 = 0.0
+totalTemp4 = 0.0
+totalTemp5 = 0.0
 countyCount = 0
 
 
@@ -179,8 +179,8 @@ with open('Temperature_2012.csv', 'r') as csvfile:
         if (row[0] == county and row[1] == state):
             temp2 = row[2]
         if (row[1] == state):
-            hold = int(totalTemp1)
-            hold += int(row[2])
+            hold = float(totalTemp1)
+            hold += float(row[2])
             totalTemp1 = str(hold)
 
 
