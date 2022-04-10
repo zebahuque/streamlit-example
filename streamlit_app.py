@@ -234,7 +234,7 @@ with open('Temperature_1997.csv', 'r') as csvfile:
             hold = float(totalTemp5)
             hold += float(row[2])
             totalTemp5 = str(hold)
-    hold2 = float(totalTemp5) / stateCount
+    hold2 = float(totalTemp5)
     hold2 = hold2
     totalTemp5 = str(hold2)
 
