@@ -5,7 +5,7 @@ import altair as alt
 import pydeck as py
 import requests
 from constants import STATES, CROPS
-from utils import temperature_chart, crop_chart
+from utils import temperature_chart, crop_chart, average_chart
 
 st.title("Climate Effects on Crop Production")
 
@@ -151,12 +151,14 @@ temp_data = pd.DataFrame({
 
 chart2 = temperature_chart.get_chart(temp_data)
 
+chart3 = average_chart.get_chart(temp_data)
+
 col1, col2 = st.columns(2)
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.altair_chart(chart1, use_container_width=False)
+    st.altair_chart(chart1, use_container_width=True)
 with col2:
     st.altair_chart(chart2, use_container_width=True)
 
