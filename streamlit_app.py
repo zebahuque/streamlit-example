@@ -5,7 +5,7 @@ import altair as alt
 import pydeck as py
 import requests
 from constants import STATES, CROPS
-from utils import temperature_chart, crop_chart, average_chart
+from utils import averageTemp_chart, temperature_chart, crop_chart, averageProd_chart
 
 st.markdown("<h1 style='text-align: center; color: black;'>Climate Effects on Crop Production</h1>", unsafe_allow_html=True)
 
@@ -183,5 +183,5 @@ st.pydeck_chart(py.Deck(
 st.markdown("""---""")
 st.markdown("<h1 style='text-align: center; color: black;'>State</h1>", unsafe_allow_html=True)
 
-chart3 = average_chart.get_chart(temp_data)
+chart3 = averageTemp_chart.get_chart(temp_data)
 st.altair_chart(chart3, use_container_width=True)
