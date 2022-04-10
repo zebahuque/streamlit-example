@@ -268,7 +268,7 @@ url = "https://nominatim.openstreetmap.org/?addressdetails=1&q=" + county + "+" 
 response = requests.get(url).json()
 
 st.pydeck_chart(py.Deck(
-    map_style='mapbox://styles/mapbox/streets-v11',
+    map_style='mapbox://styles/mapbox/outdoors-v11',
     initial_view_state=py.ViewState(
         latitude=int(float(response[0]["lat"])),
         longitude=int(float(response[0]["lon"])),
