@@ -156,7 +156,7 @@ col1, col2 = st.columns(2)
 col1, col2 = st.columns(2)
 
 with col1:
-    st.altair_chart(chart1, use_container_width=True)
+    st.altair_chart(chart1, use_container_width=False)
 with col2:
     st.altair_chart(chart2, use_container_width=True)
 
