@@ -8,6 +8,7 @@ from constants import STATES, CROPS
 from utils import temperature_chart, crop_chart, average_chart
 
 st.title("Climate Effects on Crop Production")
+st.markdown("<h1 style='text-align: center; color: red;'>Climate Effects on Crop Production</h1>", unsafe_allow_html=True)
 
 st.markdown("""---""")
 
