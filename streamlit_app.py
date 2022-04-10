@@ -77,9 +77,10 @@ with open('Crops-2017.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 first = col[colCounter]
             if (col[1] == state):
-                hold = int(totalCrop1)
-                hold += int(float(col[colCounter]))
-                totalCrop1 = str(hold)
+                if (col[colCounter] != ''):
+                    hold = int(totalCrop1)
+                    hold += int(col[colCounter])
+                    totalCrop1 = str(hold)
         
 
 with open('Crops-2012.csv', 'r') as csvfile:
