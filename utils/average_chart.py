@@ -15,7 +15,7 @@ def get_chart(data):
         .encode(
             x = alt.X("year", axis=alt.Axis(title="Year")),
             y = alt.Y("temperature", axis=alt.Axis(title="Temperature (°F)"), sort="descending"),
-            color=alt.Color("County")
+            # color=alt.Color("County")
         )
     )
 
