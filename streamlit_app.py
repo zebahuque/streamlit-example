@@ -79,7 +79,7 @@ with open('Crops-2017.csv', 'r') as csvfile:
                 print(first)
             if (col[1] == state):
                 hold = col[colCounter]
-                totalCrop1 += int(hold)
+                totalCrop1 += int(str(hold))
         
 
 with open('Crops-2012.csv', 'r') as csvfile:
