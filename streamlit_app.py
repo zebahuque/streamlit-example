@@ -162,6 +162,8 @@ with col1:
 with col2:
     st.altair_chart(chart2, use_container_width=True)
 
+st.altair_chart(chart3, use_container_width=True)
+
 url = "https://nominatim.openstreetmap.org/?addressdetails=1&q=" + county + "+" + state +"&format=json&limit=1"
 response = requests.get(url).json()
 
