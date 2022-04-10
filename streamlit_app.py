@@ -93,7 +93,6 @@ with open('Crops-2012.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 second = col[colCounter]
             if (col[1] == state):
-                # totalCrop2 += int(col[colCounter])
                 if (col[colCounter] != ''):
                     hold = int(totalCrop2)
                     hold += int(col[colCounter])
@@ -111,7 +110,6 @@ with open('Crops-2007.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 third = col[colCounter]
             if (col[1] == state):
-                # totalCrop3 += int(col[colCounter])
                 if (col[colCounter] != ''):
                     hold = int(totalCrop3)
                     hold += int(col[colCounter])
@@ -127,7 +125,6 @@ with open('Crops-2002.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 fourth = col[colCounter]
             if (col[1] == state):
-                # totalCrop4 += int(col[colCounter])
                 if (col[colCounter] != ''):
                     hold = int(totalCrop4)
                     hold += int(col[colCounter])
@@ -143,7 +140,6 @@ with open('Crops-1997.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 fifth = col[colCounter]
             if (col[1] == state):
-                # totalCrop5 += int(col[colCounter])
                 if (col[colCounter] != ''):
                     hold = int(totalCrop5)
                     hold += int(col[colCounter])
@@ -162,18 +158,31 @@ temp2 = 0
 temp3 = 0
 temp4 = 0
 temp5 = 0
+totalTemp1 = 0
+totalTemp2 = 0
+totalTemp3 = 0
+totalTemp4 = 0
+totalTemp5 = 0
+countyCount = 0
+
 
 with open('Temperature_2017.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
     for row in datareader:
-      if (row[0] == county and row[1] == state):
-        temp1 = row[2]
+        if (row[0] == county and row[1] == state):
+            temp1 = row[2]
+    
 
 with open('Temperature_2012.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
     for row in datareader:
-      if (row[0] == county and row[1] == state):
-        temp2 = row[2]
+        if (row[0] == county and row[1] == state):
+            temp2 = row[2]
+        if (row[1] == state):
+            hold = int(totalTemp1)
+            hold += int(row[2])
+            totalTemp1 = str(hold)
+
 
 with open('Temperature_2007.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
