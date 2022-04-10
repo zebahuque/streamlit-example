@@ -35,6 +35,8 @@ with col3:
     crops = st.selectbox("Select a crop", CROPS).strip()
     crop = crops
 
+st.markdown("""---""")
+
 if crop == "Oats":
     st.write("Major oat producing states are Iowa, Minnesota and Wisconsin. Oats grow best in cool, moist climates, with the optimum temperature for growth being between 20°C and 21°C (68-70°F). The plants will thrive in well drained soils but are adapted to grow in many soil types, requiring a pH between 5.5 and 7.0.")
 
