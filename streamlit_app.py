@@ -78,7 +78,7 @@ with open('Crops-2017.csv', 'r') as csvfile:
                 first = col[colCounter]
             if (col[1] == state):
                 print (totalCrop1 + int(col[colCounter]))
-                totalCrop1 += col[colCounter]
+                totalCrop1 += int(col[colCounter])
         
 
 with open('Crops-2012.csv', 'r') as csvfile:
@@ -91,7 +91,7 @@ with open('Crops-2012.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 second = col[colCounter]
             if (col[1] == state):
-                totalCrop2 += col[colCounter]
+                totalCrop2 += int(col[colCounter])
                 
             
 
@@ -105,7 +105,7 @@ with open('Crops-2007.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 third = col[colCounter]
             if (col[1] == state):
-                totalCrop3 += col[colCounter]
+                totalCrop3 += int(col[colCounter])
 
 with open('Crops-2002.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
@@ -117,7 +117,7 @@ with open('Crops-2002.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 fourth = col[colCounter]
             if (col[1] == state):
-                totalCrop4 += col[colCounter]
+                totalCrop4 += int(col[colCounter])
 
 with open('Crops-1997.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
@@ -129,7 +129,7 @@ with open('Crops-1997.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 fifth = col[colCounter]
             if (col[1] == state):
-                totalCrop5 += col[colCounter]
+                totalCrop5 += int(col[colCounter])
 
 crop_data = pd.DataFrame({
     'year': ['1997', '2002', '2007', '2012', '2017'], 'crop-production': [first, second, third, fourth, fifth], "Crop": crop})
