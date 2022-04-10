@@ -179,9 +179,12 @@ with open('Temperature_2012.csv', 'r') as csvfile:
         if (row[0] == county and row[1] == state):
             temp2 = row[2]
         if (row[1] == state):
-            hold = float(totalTemp1)
+            hold = float(totalTemp2)
             hold += float(row[2])
-            totalTemp1 = str(hold)
+            totalTemp2 = str(hold)
+    hold2 = float(totalTemp2)
+    hold2 = hold2 / 796.0
+    totalTemp2 = str(hold2)
 
 
 with open('Temperature_2007.csv', 'r') as csvfile:
