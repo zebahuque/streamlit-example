@@ -146,10 +146,10 @@ with open('Crops-1997.csv', 'r') as csvfile:
                     totalCrop5 = str(hold)
 
 crop_data = pd.DataFrame({
-    'year': ['1997', '2002', '2007', '2012', '2017'], 'crop-production': [first, second, third, fourth, fifth], "Crop": crop})
+    'year': ['1997', '2002', '2007', '2012', '2017'], 'crop-production': [fifth, fourth, third, second, first], "Crop": crop})
 
 totalCrop_data = pd.DataFrame({
-    'year': ['1997', '2002', '2007', '2012', '2017'], 'crop-production': [totalCrop1, totalCrop2, totalCrop3, totalCrop4, totalCrop5], "Crop": crop})
+    'year': ['1997', '2002', '2007', '2012', '2017'], 'crop-production': [totalCrop5, totalCrop4, totalCrop3, totalCrop2, totalCrop1], "Crop": crop})
 
 chart1 = crop_chart.get_chart(crop_data)
 
@@ -239,10 +239,10 @@ with open('Temperature_1997.csv', 'r') as csvfile:
     totalTemp5 = str(hold2)
 
 temp_data = pd.DataFrame({
-    'year': ['1997', '2002', '2007', '2012', '2017'], 'temperature': [temp1, temp2, temp3, temp4, temp5], "County": county})
+    'year': ['1997', '2002', '2007', '2012', '2017'], 'temperature': [temp5, temp4, temp3, temp2, temp1], "County": county})
 
 avgTemp_data = pd.DataFrame({
-    'year': ['1997', '2002', '2007', '2012', '2017'], 'temperature': [totalTemp1, totalTemp2, totalTemp3, totalTemp4, totalTemp5], "County": county})
+    'year': ['1997', '2002', '2007', '2012', '2017'], 'temperature': [totalTemp5, totalTemp4, totalTemp3, totalTemp2, totalTemp1], "County": county})
 
 chart2 = temperature_chart.get_chart(temp_data)
 
