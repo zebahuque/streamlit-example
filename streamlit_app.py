@@ -185,3 +185,6 @@ st.markdown("<h1 style='text-align: center; color: black;'>State</h1>", unsafe_a
 
 chart3 = averageTemp_chart.get_chart(temp_data)
 st.altair_chart(chart3, use_container_width=True)
+
+chart4 = averageProd_chart.get_chart(crop_data)
+st.altair_chart(chart4, use_container_width=True)
