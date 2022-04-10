@@ -173,12 +173,11 @@ with open('Temperature_2017.csv', 'r') as csvfile:
             temp1 = row[2]
         if (row[1] == state):
             # stateCount += 1.0
-            stateCount += 1
             hold = float(totalTemp1)
             hold += float(row[2])
             totalTemp1 = str(hold)
-    hold2 = float(totalTemp1) / float(stateCount)
-    # hold2 = hold2
+    hold2 = float(totalTemp1)
+    hold2 = hold2
     totalTemp1 = str(hold2)
     
 
@@ -189,12 +188,11 @@ with open('Temperature_2012.csv', 'r') as csvfile:
             temp2 = row[2]
         if (row[1] == state):
             # stateCount += 1.0
-            stateCount += 1
             hold = float(totalTemp2)
             hold += float(row[2])
             totalTemp2 = str(hold)
-    hold2 = float(totalTemp2) / float(stateCount)
-    # hold2 = hold2
+    hold2 = float(totalTemp2)
+    hold2 = hold2
     totalTemp2 = str(hold2)
 
 
@@ -205,12 +203,11 @@ with open('Temperature_2007.csv', 'r') as csvfile:
             temp3 = row[2]
         if (row[1] == state):
             # stateCount += 1.0
-            stateCount += 1
             hold = float(totalTemp3)
             hold += float(row[2])
             totalTemp3 = str(hold)
-    hold2 = float(totalTemp3) / float(stateCount)
-    # hold2 = hold2
+    hold2 = float(totalTemp3)
+    hold2 = hold2
     totalTemp3 = str(hold2)
 
 with open('Temperature_2002.csv', 'r') as csvfile:
@@ -220,12 +217,11 @@ with open('Temperature_2002.csv', 'r') as csvfile:
             temp4 = row[2]
         if (row[1] == state):
             # stateCount += 1.0
-            stateCount += 1
             hold = float(totalTemp4)
             hold += float(row[2])
             totalTemp4 = str(hold)
-    hold2 = float(totalTemp4) / float(stateCount)
-    # hold2 = hold2
+    hold2 = float(totalTemp4)
+    hold2 = hold2
     totalTemp4 = str(hold2)
 
 with open('Temperature_1997.csv', 'r') as csvfile:
