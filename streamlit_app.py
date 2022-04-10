@@ -84,7 +84,7 @@ with open('Crops-2017.csv', 'r') as csvfile:
                 # finally:
                 #     print('continue')
 
-                if (col[colCounter] != ''):
+                # if (col[colCounter] != ''):
                     # hold = col[colCounter]
                     # hold = int(hold)
                     totalCrop1 = col[colCounter]
