@@ -41,15 +41,17 @@ st.markdown("""---""")
 
 if crop == "Oats":
     st.markdown("<p style='text-align: center; color: black;'>Major oat producing states are Iowa, Minnesota and Wisconsin. Oats grow best in cool, moist climates, with the optimum temperature for growth being between 20°C and 21°C (68-70°F). The plants will thrive in well drained soils but are adapted to grow in many soil types, requiring a pH between 5.5 and 7.0.</p>", unsafe_allow_html=True)
-    st.write("Major oat producing states are Iowa, Minnesota and Wisconsin. Oats grow best in cool, moist climates, with the optimum temperature for growth being between 20°C and 21°C (68-70°F). The plants will thrive in well drained soils but are adapted to grow in many soil types, requiring a pH between 5.5 and 7.0.")
 
 if crop == "Soybeans":
+    st.markdown("<p style='text-align: center; color: black;'>More than 80 percent of soybeans are cultivated in the upper Midwest. Soybeans are a temperate leguminous plant with an ideal daytime temperature of 85°F. When air temperatures exceed 85°F, soybeans can experience heat stress regardless of reproductive stage. When soybeans experience heat stress, yield reductions can begin to occur, especially when soil moisture is limiting.</p>", unsafe_allow_html=True)
     st.write("More than 80 percent of soybeans are cultivated in the upper Midwest. Soybeans are a temperate leguminous plant with an ideal daytime temperature of 85°F. When air temperatures exceed 85°F, soybeans can experience heat stress regardless of reproductive stage. When soybeans experience heat stress, yield reductions can begin to occur, especially when soil moisture is limiting.")
 
 if crop == "Wheat":
+    st.markdown("<p style='text-align: center; color: black;'>Minnesota is a major wheat-producing state. High temperature stress is a major environmental factor that limits yield in wheat. Every 1°C increase above a mean temperature of 23°C decreases wheat yield by around 10 percent. More than 40 percent of total wheat area in the world is affected by high temperature stress.</p>", unsafe_allow_html=True)
     st.write("Minnesota is a major wheat-producing state. High temperature stress is a major environmental factor that limits yield in wheat. Every 1°C increase above a mean temperature of 23°C decreases wheat yield by around 10 percent. More than 40 percent of total wheat area in the world is affected by high temperature stress.")
 
 if crop == "Corn":
+    st.markdown("<p style='text-align: center; color: black;'>Corn is grown in most U.S. states, but production is concentrated in the Heartland region. Corn originated as a tropical grass and can tolerate exposures to adverse temperatures as high as 112°F for brief periods. Optimal daytime temperatures for corn typically range between 77°F and 91°F. Growth decreases when temperatures exceed 95°F.</p>", unsafe_allow_html=True)
     st.write("Corn is grown in most U.S. states, but production is concentrated in the Heartland region. Corn originated as a tropical grass and can tolerate exposures to adverse temperatures as high as 112°F for brief periods. Optimal daytime temperatures for corn typically range between 77°F and 91°F. Growth decreases when temperatures exceed 95°F.")
 
 st.markdown("""---""")
