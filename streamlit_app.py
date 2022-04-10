@@ -180,6 +180,7 @@ st.pydeck_chart(py.Deck(
         pitch=50
 )))
 
+st.markdown("""---""")
 st.markdown("<h1 style='text-align: center; color: black;'>State</h1>", unsafe_allow_html=True)
 
 chart3 = average_chart.get_chart(temp_data)
