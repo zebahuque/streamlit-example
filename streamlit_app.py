@@ -275,20 +275,20 @@ st.pydeck_chart(py.Deck(
         zoom=11,
         pitch=50
     ),
-    layers=[
-        py.Layer(
-            'ColumnLayer',
-            data=data,
-            get_position='[lon, lat]',
-            get_elevation='[newCases]',
-            radius=20000,
-            auto_highlight=True,
-            elevation_scale=100,
-            elevation_range=[0, 5000],
-            pickable=True,
-            extruded=True
-        )
-    ]
+    # layers=[
+    #     py.Layer(
+    #         'ColumnLayer',
+    #         data=data,
+    #         get_position='[lon, lat]',
+    #         get_elevation='[newCases]',
+    #         radius=20000,
+    #         auto_highlight=True,
+    #         elevation_scale=100,
+    #         elevation_range=[0, 5000],
+    #         pickable=True,
+    #         extruded=True
+    #     )
+    # ]
 ))
 
 st.markdown("""---""")
