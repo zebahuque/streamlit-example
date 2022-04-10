@@ -163,7 +163,6 @@ totalTemp2 = 0.0
 totalTemp3 = 0.0
 totalTemp4 = 0.0
 totalTemp5 = 0.0
-countyCount = 0
 
 
 with open('Temperature_2017.csv', 'r') as csvfile:
@@ -171,6 +170,13 @@ with open('Temperature_2017.csv', 'r') as csvfile:
     for row in datareader:
         if (row[0] == county and row[1] == state):
             temp1 = row[2]
+        if (row[1] == state):
+            hold = float(totalTemp1)
+            hold += float(row[2])
+            totalTemp1 = str(hold)
+    hold2 = float(totalTemp1)
+    hold2 = hold2 / 796.0
+    totalTemp1 = str(hold2)
     
 
 with open('Temperature_2012.csv', 'r') as csvfile:
@@ -190,23 +196,47 @@ with open('Temperature_2012.csv', 'r') as csvfile:
 with open('Temperature_2007.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
     for row in datareader:
-      if (row[0] == county and row[1] == state):
-        temp3 = row[2]
+        if (row[0] == county and row[1] == state):
+            temp3 = row[2]
+        if (row[1] == state):
+            hold = float(totalTemp3)
+            hold += float(row[2])
+            totalTemp3 = str(hold)
+    hold2 = float(totalTemp3)
+    hold2 = hold2 / 797.0
+    totalTemp3 = str(hold2)
 
 with open('Temperature_2002.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
     for row in datareader:
-      if (row[0] == county and row[1] == state):
-        temp4 = row[2]
+        if (row[0] == county and row[1] == state):
+            temp4 = row[2]
+        if (row[1] == state):
+            hold = float(totalTemp4)
+            hold += float(row[2])
+            totalTemp4 = str(hold)
+    hold2 = float(totalTemp4)
+    hold2 = hold2 / 797.0
+    totalTemp4 = str(hold2)
 
 with open('Temperature_1997.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
     for row in datareader:
-      if (row[0] == county and row[1] == state):
-        temp5 = row[2]
+        if (row[0] == county and row[1] == state):
+            temp5 = row[2]
+        if (row[1] == state):
+            hold = float(totalTemp5)
+            hold += float(row[2])
+            totalTemp5 = str(hold)
+    hold2 = float(totalTemp5)
+    hold2 = hold2 / 797.0
+    totalTemp5 = str(hold2)
 
 temp_data = pd.DataFrame({
     'year': ['1997', '2002', '2007', '2012', '2017'], 'temperature': [temp1, temp2, temp3, temp4, temp5], "County": county})
+
+avgTemp_data = pd.DataFrame({
+    'year': ['1997', '2002', '2007', '2012', '2017'], 'temperature': [totalTemp1, totalTemp2, totalTemp3, totalTemp4, totalTemp5], "County": county})
 
 chart2 = temperature_chart.get_chart(temp_data)
 
@@ -237,5 +267,5 @@ st.markdown("<h1 style='text-align: center; color: black;'>State</h1>", unsafe_a
 chart3 = totalProd_chart.get_chart(totalCrop_data)
 st.altair_chart(chart3, use_container_width=True)
 
-chart4 = totalTemp_chart.get_chart(temp_data)
+chart4 = totalTemp_chart.get_chart(avgTemp_data)
 st.altair_chart(chart4, use_container_width=True)
