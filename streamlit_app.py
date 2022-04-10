@@ -9,6 +9,8 @@ from utils import temperature_chart, crop_chart, average_chart
 
 st.title("Climate Effects on Crop Production")
 
+st.markdown("""---""")
+
 filename = 'Crops-2017.csv'
 COUNTIES = []
 county = ""
@@ -48,6 +50,8 @@ if crop == "Wheat":
 
 if crop == "Corn":
     st.write("Corn is grown in most U.S. states, but production is concentrated in the Heartland region. Corn originated as a tropical grass and can tolerate exposures to adverse temperatures as high as 112°F for brief periods. Optimal daytime temperatures for corn typically range between 77°F and 91°F. Growth decreases when temperatures exceed 95°F.")
+
+st.markdown("""---""")
 
 colCounter = 0
 first = 0
