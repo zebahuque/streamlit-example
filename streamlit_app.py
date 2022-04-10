@@ -228,9 +228,10 @@ with open('Temperature_1997.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
     for row in datareader:
         if (row[0] == county and row[1] == state):
+            stateCount += 1.0
             temp5 = row[2]
         if (row[1] == state):
-            stateCount += 1.0
+            # stateCount += 1.0
             hold = float(totalTemp5)
             hold += float(row[2])
             totalTemp5 = str(hold)
