@@ -40,6 +40,7 @@ with col3:
 st.markdown("""---""")
 
 if crop == "Oats":
+    st.markdown("<h5 style='text-align: center; color: black;'>Major oat producing states are Iowa, Minnesota and Wisconsin. Oats grow best in cool, moist climates, with the optimum temperature for growth being between 20°C and 21°C (68-70°F). The plants will thrive in well drained soils but are adapted to grow in many soil types, requiring a pH between 5.5 and 7.0.</h5>", unsafe_allow_html=True)
     st.write("Major oat producing states are Iowa, Minnesota and Wisconsin. Oats grow best in cool, moist climates, with the optimum temperature for growth being between 20°C and 21°C (68-70°F). The plants will thrive in well drained soils but are adapted to grow in many soil types, requiring a pH between 5.5 and 7.0.")
 
 if crop == "Soybeans":
