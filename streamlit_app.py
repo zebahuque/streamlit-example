@@ -76,6 +76,7 @@ with open('Crops-2017.csv', 'r') as csvfile:
         for col in datareader:
             if (col[0] == county and col[1] == state):
                 first = col[colCounter]
+                print(first)
             if (col[1] == state):
                 totalCrop1 += int(col[colCounter])
         
