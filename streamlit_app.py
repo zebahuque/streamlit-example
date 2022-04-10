@@ -93,7 +93,11 @@ with open('Crops-2012.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 second = col[colCounter]
             if (col[1] == state):
-                totalCrop2 += int(col[colCounter])
+                # totalCrop2 += int(col[colCounter])
+                if (col[colCounter] != ''):
+                    hold = int(totalCrop2)
+                    hold += int(col[colCounter])
+                    totalCrop2 = str(hold)
                 
             
 
@@ -107,7 +111,11 @@ with open('Crops-2007.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 third = col[colCounter]
             if (col[1] == state):
-                totalCrop3 += int(col[colCounter])
+                # totalCrop3 += int(col[colCounter])
+                if (col[colCounter] != ''):
+                    hold = int(totalCrop3)
+                    hold += int(col[colCounter])
+                    totalCrop3 = str(hold)
 
 with open('Crops-2002.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
@@ -119,7 +127,11 @@ with open('Crops-2002.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 fourth = col[colCounter]
             if (col[1] == state):
-                totalCrop4 += int(col[colCounter])
+                # totalCrop4 += int(col[colCounter])
+                if (col[colCounter] != ''):
+                    hold = int(totalCrop4)
+                    hold += int(col[colCounter])
+                    totalCrop4 = str(hold)
 
 with open('Crops-1997.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
@@ -131,7 +143,11 @@ with open('Crops-1997.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 fifth = col[colCounter]
             if (col[1] == state):
-                totalCrop5 += int(col[colCounter])
+                # totalCrop5 += int(col[colCounter])
+                if (col[colCounter] != ''):
+                    hold = int(totalCrop5)
+                    hold += int(col[colCounter])
+                    totalCrop5 = str(hold)
 
 crop_data = pd.DataFrame({
     'year': ['1997', '2002', '2007', '2012', '2017'], 'crop-production': [first, second, third, fourth, fifth], "Crop": crop})
