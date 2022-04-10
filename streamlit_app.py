@@ -7,8 +7,7 @@ import requests
 from constants import STATES, CROPS
 from utils import temperature_chart, crop_chart, average_chart
 
-st.title("Climate Effects on Crop Production")
-st.markdown("<h1 style='text-align: center; color: red;'>Climate Effects on Crop Production</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>Climate Effects on Crop Production</h1>", unsafe_allow_html=True)
 
 st.markdown("""---""")
 
@@ -53,6 +52,8 @@ if crop == "Corn":
     st.write("Corn is grown in most U.S. states, but production is concentrated in the Heartland region. Corn originated as a tropical grass and can tolerate exposures to adverse temperatures as high as 112°F for brief periods. Optimal daytime temperatures for corn typically range between 77°F and 91°F. Growth decreases when temperatures exceed 95°F.")
 
 st.markdown("""---""")
+
+st.markdown("<h1 style='text-align: center; color: black;'>County</h1>", unsafe_allow_html=True)
 
 colCounter = 0
 first = 0
@@ -178,6 +179,8 @@ st.pydeck_chart(py.Deck(
         zoom=11,
         pitch=50
 )))
+
+st.markdown("<h1 style='text-align: center; color: black;'>State</h1>", unsafe_allow_html=True)
 
 chart3 = average_chart.get_chart(temp_data)
 st.altair_chart(chart3, use_container_width=True)
