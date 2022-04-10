@@ -5,7 +5,7 @@ import altair as alt
 import pydeck as py
 import requests
 from constants import STATES, CROPS
-from utils import averageTemp_chart, temperature_chart, crop_chart, averageProd_chart
+from utils import temperature_chart, crop_chart, totalProd_chart, totalTemp_chart
 
 st.markdown("<h1 style='text-align: center; color: black;'>Climate Effects on Crop Production</h1>", unsafe_allow_html=True)
 
@@ -61,6 +61,11 @@ second = 0
 third = 0
 fourth = 0
 fifth = 0
+totalCrop1 = 0
+totalCrop2 = 0
+totalCrop3 = 0
+totalCrop4 = 0
+totalCrop5 = 0
 
 with open('Crops-2017.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
@@ -71,6 +76,8 @@ with open('Crops-2017.csv', 'r') as csvfile:
         for col in datareader:
             if (col[0] == county and col[1] == state):
                 first = col[colCounter]
+            if (col[1] == state):
+                totalCrop1 += col[colCounter]
         
 
 with open('Crops-2012.csv', 'r') as csvfile:
@@ -82,6 +89,10 @@ with open('Crops-2012.csv', 'r') as csvfile:
         for col in datareader:
             if (col[0] == county and col[1] == state):
                 second = col[colCounter]
+            if (col[1] == state):
+                totalCrop2 += col[colCounter]
+                
+            
 
 with open('Crops-2007.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
@@ -92,6 +103,8 @@ with open('Crops-2007.csv', 'r') as csvfile:
         for col in datareader:
             if (col[0] == county and col[1] == state):
                 third = col[colCounter]
+            if (col[1] == state):
+                totalCrop3 += col[colCounter]
 
 with open('Crops-2002.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
@@ -102,6 +115,8 @@ with open('Crops-2002.csv', 'r') as csvfile:
         for col in datareader:
             if (col[0] == county and col[1] == state):
                 fourth = col[colCounter]
+            if (col[1] == state):
+                totalCrop4 += col[colCounter]
 
 with open('Crops-1997.csv', 'r') as csvfile:
     datareader = csv.reader(csvfile)
@@ -112,9 +127,14 @@ with open('Crops-1997.csv', 'r') as csvfile:
         for col in datareader:
             if (col[0] == county and col[1] == state):
                 fifth = col[colCounter]
+            if (col[1] == state):
+                totalCrop5 += col[colCounter]
 
 crop_data = pd.DataFrame({
     'year': ['1997', '2002', '2007', '2012', '2017'], 'crop-production': [first, second, third, fourth, fifth], "Crop": crop})
+
+totalCrop_data = pd.DataFrame({
+    'year': ['1997', '2002', '2007', '2012', '2017'], 'crop-production': [totalCrop1, totalCrop2, totalCrop3, totalCrop4, totalCrop5], "Crop": crop})
 
 chart1 = crop_chart.get_chart(crop_data)
 
@@ -183,8 +203,8 @@ st.pydeck_chart(py.Deck(
 st.markdown("""---""")
 st.markdown("<h1 style='text-align: center; color: black;'>State</h1>", unsafe_allow_html=True)
 
-chart3 = averageTemp_chart.get_chart(temp_data)
+chart3 = totalProd_chart.get_chart(totalCrop_data)
 st.altair_chart(chart3, use_container_width=True)
 
-chart4 = averageProd_chart.get_chart(crop_data)
+chart4 = totalTemp_chart.get_chart(temp_data)
 st.altair_chart(chart4, use_container_width=True)
