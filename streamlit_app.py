@@ -163,6 +163,7 @@ totalTemp2 = 0.0
 totalTemp3 = 0.0
 totalTemp4 = 0.0
 totalTemp5 = 0.0
+stateCount = 0.0
 
 
 with open('Temperature_2017.csv', 'r') as csvfile:
@@ -171,11 +172,12 @@ with open('Temperature_2017.csv', 'r') as csvfile:
         if (row[0] == county and row[1] == state):
             temp1 = row[2]
         if (row[1] == state):
+            stateCount += 1.0
             hold = float(totalTemp1)
             hold += float(row[2])
             totalTemp1 = str(hold)
     hold2 = float(totalTemp1)
-    hold2 = hold2 / 796.0
+    hold2 = hold2 / stateCount
     totalTemp1 = str(hold2)
     
 
@@ -185,11 +187,12 @@ with open('Temperature_2012.csv', 'r') as csvfile:
         if (row[0] == county and row[1] == state):
             temp2 = row[2]
         if (row[1] == state):
+            stateCount += 1.0
             hold = float(totalTemp2)
             hold += float(row[2])
             totalTemp2 = str(hold)
     hold2 = float(totalTemp2)
-    hold2 = hold2 / 796.0
+    hold2 = hold2 / stateCount
     totalTemp2 = str(hold2)
 
 
@@ -199,11 +202,12 @@ with open('Temperature_2007.csv', 'r') as csvfile:
         if (row[0] == county and row[1] == state):
             temp3 = row[2]
         if (row[1] == state):
+            stateCount += 1.0
             hold = float(totalTemp3)
             hold += float(row[2])
             totalTemp3 = str(hold)
     hold2 = float(totalTemp3)
-    hold2 = hold2 / 797.0
+    hold2 = hold2 / stateCount += 1.0
     totalTemp3 = str(hold2)
 
 with open('Temperature_2002.csv', 'r') as csvfile:
@@ -212,11 +216,12 @@ with open('Temperature_2002.csv', 'r') as csvfile:
         if (row[0] == county and row[1] == state):
             temp4 = row[2]
         if (row[1] == state):
+            stateCount += 1.0
             hold = float(totalTemp4)
             hold += float(row[2])
             totalTemp4 = str(hold)
     hold2 = float(totalTemp4)
-    hold2 = hold2 / 797.0
+    hold2 = hold2 / stateCount
     totalTemp4 = str(hold2)
 
 with open('Temperature_1997.csv', 'r') as csvfile:
@@ -225,11 +230,12 @@ with open('Temperature_1997.csv', 'r') as csvfile:
         if (row[0] == county and row[1] == state):
             temp5 = row[2]
         if (row[1] == state):
+            stateCount += 1.0
             hold = float(totalTemp5)
             hold += float(row[2])
             totalTemp5 = str(hold)
     hold2 = float(totalTemp5)
-    hold2 = hold2 / 797.0
+    hold2 = hold2 / stateCount
     totalTemp5 = str(hold2)
 
 temp_data = pd.DataFrame({
