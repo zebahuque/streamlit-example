@@ -235,7 +235,7 @@ with open('Temperature_1997.csv', 'r') as csvfile:
             hold += float(row[2])
             totalTemp5 = str(hold)
     hold2 = float(totalTemp5)
-    hold2 = hold2 / stateCount
+    hold2 = hold2
     totalTemp5 = str(hold2)
 
 temp_data = pd.DataFrame({
