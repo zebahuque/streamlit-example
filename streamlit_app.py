@@ -77,7 +77,7 @@ with open('Crops-2017.csv', 'r') as csvfile:
             if (col[0] == county and col[1] == state):
                 first = col[colCounter]
             if (col[1] == state):
-                print (totalCrop1, col[colCounter])
+                print (totalCrop1 + col[colCounter])
                 totalCrop1 += col[colCounter]
         
 
